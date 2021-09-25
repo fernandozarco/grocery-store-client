@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>{{item.name}}</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="form">
+    <div>
+      <div class="form-check" *ngFor="let unit of units">
+        <input class="form-check-input" type="radio" name="unitId" id="radioPriceOptionId{{unit.id}}"
+          formControlName="unitId" [value]="unit.id" (change)="assignUnit(unit)">
+        <label class="form-check-label" for="radioPriceOptionId{{unit.id}}">
+          {{unit.name}} Bs. {{unit.pivot.price}}.-
+        </label>
+      </div>
+    </div>
+    <div class="my-3">
+      <label class="form-label">Precio</label>
+      <input type="number" class="form-control" placeholder="0.00" formControlName="salePrice" [(ngModel)]="salePrice">
+    </div>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="submit()" [disabled]="!form.valid">Vender</button>
+  </form>
+</mat-dialog-content>
