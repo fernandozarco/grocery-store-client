@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ReportsService } from '../reports.service';
 
 @Component({
   selector: 'app-sales-report',
@@ -9,23 +8,11 @@ import { ReportsService } from '../reports.service';
 })
 export class SalesReportComponent implements OnInit {
 
-  // transactions: any[] = [];
   @Input() transactions: any[] = [];
 
-  constructor(private reportsService: ReportsService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    // this.getSalesreport();
   }
-
-  // getSalesreport(): void {
-  //   this.reportsService.todaySalesReport().subscribe(
-  //     response => {
-  //       console.log(response);
-  //       this.transactions = response.data;
-  //     },
-  //     error => console.log(error)
-  //   );
-  // }
 
 }

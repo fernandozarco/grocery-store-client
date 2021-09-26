@@ -1,5 +1,4 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormBuilder, Validators } from '@angular/forms';
 import { CartService } from '../../cart/cart.service';
@@ -23,7 +22,6 @@ export class ItemsDetailComponent implements OnInit {
     ]]
   });
 
-  // constructor(public dialogRef: MatDialogRef<ItemsDetailComponent>) { }
   constructor(
     @Inject(MAT_DIALOG_DATA) public item,
     private formBuilder: FormBuilder,
@@ -36,7 +34,6 @@ export class ItemsDetailComponent implements OnInit {
   }
 
   assignUnit(unit) {
-    console.log(unit);
     this.selectedUnit = unit;
     this.salePrice = unit.pivot.price;
   }
@@ -52,9 +49,5 @@ export class ItemsDetailComponent implements OnInit {
     this.cartService.addToCart(itemCart);
     this.router.navigate(['/categories']);
   }
-
-  // closeDialog() {
-  //   this.dialogRef.close('Exit!');
-  // }
 
 }

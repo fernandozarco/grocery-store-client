@@ -13,19 +13,11 @@ export class CartIndexComponent implements OnInit {
   totalPrice: number = 0;
 
   constructor(private cartService: CartService) {
-    console.log('length cart');
-    console.log(this.items);
   }
 
   ngOnInit(): void {
-    console.log(this.items);
-    console.log(this.cartService.getItems());
     this.items = this.cartService.getItems();
-    console.log('after');
-    console.log(this.items);
-    console.log('totalPrice');
     this.sumOfCartItems();
-    console.log(this.totalPrice);
   }
 
   sumOfCartItems() {
@@ -42,14 +34,9 @@ export class CartIndexComponent implements OnInit {
     let data = {
       items: this.items
     };
-    console.log('finished sale');
     this.cartService.saveCart(data).subscribe(
-      response => {
-        console.log(response);
-        console.log('crat finished');
-        this.emptyCart();
-      },
-      error => console.log(error)
+      response => this.emptyCart(),
+      error => console.log(error.message)
     );
   }
 

@@ -17,8 +17,6 @@ export class CartService {
   addToCart(item: CartItem) {
     this.items.push(item);
     sessionStorage.setItem('items', JSON.stringify(this.items));
-    console.log('CART');
-    console.log(this.getItems());
   }
 
   getItems() {

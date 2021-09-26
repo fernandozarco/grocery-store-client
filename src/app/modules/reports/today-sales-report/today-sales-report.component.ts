@@ -21,7 +21,6 @@ export class TodaySalesReportComponent implements OnInit {
   getSalesreport(): void {
     this.reportsService.todaySalesReport().subscribe(
       response => {
-        console.log(response);
         this.transactions = response.data;
         this.sumTotalSales();
       },

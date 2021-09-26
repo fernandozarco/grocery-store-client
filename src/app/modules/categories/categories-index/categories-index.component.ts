@@ -19,10 +19,7 @@ export class CategoriesIndexComponent implements OnInit {
 
   getcategories(): void {
     this.categoriesService.getCategories().subscribe(
-      response => {
-        this.categories = response.data;
-        console.log(this.categories);
-      },
+      response => this.categories = response.data,
       error => console.log(error.message),
     );
   }

@@ -17,6 +17,8 @@ import { SalesReportComponent } from './modules/reports/sales-report/sales-repor
 import { TodaySalesReportComponent } from './modules/reports/today-sales-report/today-sales-report.component';
 import { PriceFormatPipe } from './shared/pipes/price-format.pipe';
 import { ImageRoutePipe } from './shared/pipes/image-route.pipe';
+import { MatIconModule } from '@angular/material/icon';
+import { FloatButtonComponent } from './shared/components/float-button/float-button.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { ImageRoutePipe } from './shared/pipes/image-route.pipe';
     TodaySalesReportComponent,
     PriceFormatPipe,
     ImageRoutePipe,
+    FloatButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { ImageRoutePipe } from './shared/pipes/image-route.pipe';
     FormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    MatRadioModule
+    MatRadioModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

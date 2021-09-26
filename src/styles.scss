@@ -99,3 +99,28 @@ h1.title-page {
 .totalTodaySales {
   font-size: 1.5rem;
 }
+
+.cart-icon {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 25px;
+  bottom: 25px;
+  border: 2px solid $primary-color;
+  width: 60px;  
+  height: 60px;
+  border-radius: 50%;
+  background-color: $primary-color;
+  box-shadow: 0 0 0 0.25rem rgb(169 32 48 / 25%);
+
+  .icon {
+    width: 65%;
+    height: 65%;
+    fill: #fff;
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: $dark-primary-color;
+}
