@@ -33,7 +33,69 @@ $grocery-store-client-theme: mat-light-theme((
 // that you are using.
 @include angular-material-theme($grocery-store-client-theme);
 
+@import './sass/variables';
+@import './sass/form.scss';
+@import './sass/buttons';
+// @import './sass/header';
+// @import './sass/pages/pages';
+// @import './sass/footer';
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.block-item {
+  margin: .5rem 0;
+  text-align: center;
+  &__image-container {
+    width: 7rem;
+    height: 7rem;
+    // border: thin solid blue;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__title {
+    font-size: .8rem;
+    font-weight: 500;
+  }
+}
+
+.modal-units {
+  text-align: center;
+
+  &__unit-option {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+      margin: 0 .5rem;
+    }
+    label {
+      font-size: 1rem;
+    }
+  }
+}
+
+.logo-image {
+  height: 5rem;
+}
+h1.title-page {
+  font-size: 1.1rem;
+  color: $primary-color;
+}
+.totalTodaySales {
+  font-size: 1.5rem;
+}

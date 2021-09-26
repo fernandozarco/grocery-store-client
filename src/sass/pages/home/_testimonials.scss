@@ -1,0 +1,24 @@
+.testimonials-container {
+    .author_data {
+        // margin-top: .5rem;
+        margin-bottom: 2.2rem;
+        &_avatar {
+            // padding-top: 1rem;
+            text-align: center;
+            &_image {
+                width: 6rem;
+                height: 6rem;
+            }
+            &_title {
+                display: block;
+                font-size: 1.2rem;
+                font-weight: 600;
+                line-height: .5rem;
+            }
+            &_subtitle {
+                font-size: .9rem;
+                line-height: .3rem;
+            }
+        }
+    }
+}

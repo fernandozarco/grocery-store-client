@@ -1,0 +1,27 @@
+<div class="row" *ngIf="transactions.length > 0">
+    <div class="col-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Producto</th>
+            <th scope="col"></th>
+            <th scope="col" class="text-end">Precio (Bs)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaction of transactions; let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{transaction.item.name}}</td>
+            <td>{{transaction.unit.name}}</td>
+            <td class="text-end">{{transaction.price | priceFormat}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- <div class="row" *ngIf="transactions.length === 0">
+    <div class="col-12">
+      Ningun resultado para mostrar.
+    </div>
+  </div> -->

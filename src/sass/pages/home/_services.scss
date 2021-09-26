@@ -1,0 +1,14 @@
+.services-container {
+    &_item {
+        padding: 1.5rem 0;
+        &_image {
+            width: 5.5rem;
+        }
+        &_label {
+            display: block;
+            font-weight: 700;
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+    }
+}

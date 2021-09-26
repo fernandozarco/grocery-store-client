@@ -13,6 +13,10 @@ import { MatRadioModule } from '@angular/material/radio';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './shared/header/header.component';
 import { CartIndexComponent } from './modules/cart/cart-index/cart-index.component';
+import { SalesReportComponent } from './modules/reports/sales-report/sales-report.component';
+import { TodaySalesReportComponent } from './modules/reports/today-sales-report/today-sales-report.component';
+import { PriceFormatPipe } from './shared/pipes/price-format.pipe';
+import { ImageRoutePipe } from './shared/pipes/image-route.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import { CartIndexComponent } from './modules/cart/cart-index/cart-index.compone
     ItemsDetailComponent,
     HeaderComponent,
     CartIndexComponent,
+    SalesReportComponent,
+    TodaySalesReportComponent,
+    PriceFormatPipe,
+    ImageRoutePipe,
   ],
   imports: [
     BrowserModule,

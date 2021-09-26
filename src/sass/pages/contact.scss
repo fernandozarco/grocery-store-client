@@ -1,0 +1,12 @@
+.contact-container {
+    .contact-header {
+        padding-top: 2rem;
+    }
+
+    .social-networks {
+        @media (max-width: 991px) {
+            padding-top: 1rem;
+            text-align: center;
+        }
+    }
+}

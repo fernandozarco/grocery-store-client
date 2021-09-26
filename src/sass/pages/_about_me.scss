@@ -1,0 +1,40 @@
+.about-me {
+    .about_column {
+        display: flex;
+        align-items: center;
+
+        &.column_image {
+            .about_column_image {
+                margin: 0 auto;
+                height: 26rem;
+                @media (max-width: 991px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        &.column_body {
+            .container-column {
+                padding: 0 2rem;
+                .prt_heading_wrapper {
+                    text-align: left;
+                }
+                @media (max-width: 991px) {
+                    padding: 2rem 0;
+                }
+                .about_column_head {
+                    margin: 1rem 0;
+
+                    .about_column_title {
+                        font-size: 2rem;
+                        margin: 0;
+                    }
+                    .about_column_subtitle {
+                        font-size: 1rem;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

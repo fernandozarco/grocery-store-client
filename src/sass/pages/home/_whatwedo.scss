@@ -1,0 +1,11 @@
+.what-we-do-container {
+    &_image {
+        width: 60%;
+        margin: 0 auto;
+        
+        @media (max-width: 991px) {
+            width: 100%;
+        }
+        
+    }
+}

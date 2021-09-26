@@ -1,0 +1,54 @@
+.banner-container {
+    position: relative;
+    .banner_item {
+        &_image {
+            height: 85vh;
+            // background-image: url('./../../../assets/img/dentist_banner.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 1;
+        }
+
+        &_background_overlay {
+            background-color: transparent;
+            background-image: linear-gradient(180deg, #040C38 50%, #FFFFFF00 100%);
+            opacity: 0.3;
+            transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: 2;
+        }
+
+        &_container_caption {
+            display: flex;
+            position: absolute;
+            top: 15vh;
+            left: 10vw;
+            width: 70vw;
+            height: 60vh;
+            z-index: 3;
+            color: #ffffff;
+
+            &-head {
+                margin-bottom: 1.5rem;
+                &_title {
+                    font-size: 4rem;
+                    line-height: 3rem;
+                    margin: .5rem 0;
+                    color: $text-color-white;
+                    // font-size: 4.5rem;
+                    // margin: 2rem 0;
+                }
+
+                &_subtitle {
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

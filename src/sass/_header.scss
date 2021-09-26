@@ -1,0 +1,97 @@
+.dental_logo {
+    height: 4rem;
+}
+
+.navbar-light {
+    background-color: #ffffff;
+    height: 7rem;
+}
+.navbar-collapse {
+    &_header {
+        visibility: hidden;
+        display: none;
+    }
+}
+// for mobile devices
+@media (max-width: 991px) { 
+    .navbar-collapse {
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition-duration: 1s;
+        background-color: $black-color;
+        padding: 2rem 0;
+        text-align: center;
+
+        &_header {
+            margin-bottom: 2.5rem;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            visibility: visible;
+            
+            .close {
+                height: 50px;
+                display: inline-flex;
+                color: #96999F;
+
+                a {
+                    display: flex;
+                    align-items: center;
+
+                    mat-icon {
+                        font-size: 2rem;
+                        margin: 0 .5rem;
+                    }
+                }
+            }
+
+            .logo-hamburger {
+                display: inline-flex;
+                img {
+                    height: 3rem;
+                }
+            }
+        }
+        
+        .navbar-nav .nav-item .nav-link {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: $text-color-white;
+            margin: 1rem 0;
+        }
+    }
+    .navbar-collapse.collapse.show {
+        height: 100vh;
+    }
+    .navbar-nav {
+        height: 100vh;
+    }
+}
+// for mobile devices  
+
+.navbar-nav {
+    .nav-item {
+        margin-left: .5rem;
+        margin-right: .5rem;
+        .nav-link {
+            color: $text-color;
+            &_contact {
+                margin-right: 2rem;
+                &_image {
+                    display: inline-block;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin-right: .5rem;
+                }
+                span {
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

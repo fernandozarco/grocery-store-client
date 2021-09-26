@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-12 text-center">
+        <h1 class="title-page">Ventas de hoy</h1>
+        <span class="totalTodaySales">Bs. {{totalSale | priceFormat}}.-</span>
+        <!-- <h1>Bs. {{totalSale | priceFormat}}.-</h1> -->
+        <!-- <small>Ventas de hoy</small> -->
+    </div>
+</div>
+<app-sales-report [transactions]="transactions"></app-sales-report>

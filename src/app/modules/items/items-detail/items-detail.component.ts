@@ -3,6 +3,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormBuilder, Validators } from '@angular/forms';
 import { CartService } from '../../cart/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-items-detail',
@@ -26,7 +27,8 @@ export class ItemsDetailComponent implements OnInit {
   constructor(
     @Inject(MAT_DIALOG_DATA) public item,
     private formBuilder: FormBuilder,
-    private cartService: CartService
+    private cartService: CartService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -40,10 +42,6 @@ export class ItemsDetailComponent implements OnInit {
   }
 
   submit() {
-    console.log(this.form.value);
-    console.log(this.item);
-    console.log('getValue');
-    console.log(this.form.get('salePrice').value);
     let itemCart = {
       itemId: this.item.id,
       itemName: this.item.name,
@@ -51,9 +49,8 @@ export class ItemsDetailComponent implements OnInit {
       unitName: this.selectedUnit.name,
       salePrice: this.form.get('salePrice').value,
     }
-    console.log('itemCart');
-    console.log(itemCart);
     this.cartService.addToCart(itemCart);
+    this.router.navigate(['/categories']);
   }
 
   // closeDialog() {
